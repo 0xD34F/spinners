@@ -325,3 +325,42 @@ table {
         transform: rotate(360deg);
     }
 }
+
+
+.spinner-8 {
+    width: 30px;
+    height: 20px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+.spinner-8  > div {
+    animation: spinner-8 1s infinite steps(10);
+    display: inline-block;
+    width: 10px;
+}
+.spinner-8  > div:nth-child(1) {
+    animation-duration: 100s;
+}
+.spinner-8  > div:nth-child(2) {
+    animation-duration: 10s;
+}
+.spinner-8  > div:nth-child(3) {
+    animation-duration: 1s;
+}
+.spinner-8 > div::before {
+    content: "0123456789";
+    width: 10px;
+    height: 20px;
+    font-size: 20px;
+    word-wrap: break-word;
+    text-overflow: clip;
+    position: absolute;
+}
+@keyframes spinner-8 {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-200px);
+    }
+}
