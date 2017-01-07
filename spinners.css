@@ -262,8 +262,8 @@ table {
 
 
 .spinner-6 {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
 }
 .spinner-6 > div {
     width: 50%;
@@ -293,7 +293,7 @@ table {
         opacity: 0;
     }
     50% {
-        transform: scale(0.5);
+        transform: scale(0.7);
         opacity: 1;
     }
 }
@@ -362,5 +362,33 @@ table {
     }
     100% {
         transform: translateY(-200px);
+    }
+}
+
+
+.spinner-9 {
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background-color: transparent;
+    animation: spinner-9-rotate 1s infinite linear, spinner-9-shadow 1s infinite ease-out;
+}
+@keyframes spinner-9-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes spinner-9-shadow {
+    0% {
+        box-shadow: 0px 0px 0 5px, 0px 0px 0 5px, 0px 0px 0 5px, 0px 0px 0 5px;
+    }
+    50% {
+        box-shadow: 0px 30px 0 5px, 30px 0px 0 5px, 0px -30px 0 5px, -30px 0px 0 5px;
+    }
+    100% {
+        box-shadow: 0px 0px 0 5px, 0px 0px 0 5px, 0px 0px 0 5px, 0px 0px 0 5px;
     }
 }
