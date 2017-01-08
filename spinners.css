@@ -431,10 +431,10 @@ table {
     position: relative;
     width: 4px;
     height: 40px;
-    transform-origin: 2px 2px;
-    border-radius: 2px;
+    transform-origin: 2px 38px;
+    border-radius: 4px;
     left: 44px;
-    top: 44px;
+    top: 8px;
     animation: spinner-11 1s infinite linear;
 }
 .spinner-11::after {
@@ -444,10 +444,10 @@ table {
     position: relative;
     width: 4px;
     height: 30px;
-    transform-origin: 2px 2px;
+    transform-origin: 2px 28px;
     border-radius: 4px;
     left: 40px;
-    top: 34px;
+    top: 8px;
     animation: spinner-11 12s infinite linear;
 }
 @keyframes spinner-11 {
@@ -456,5 +456,57 @@ table {
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+
+.spinner-12 {
+    width: 100px;
+    height: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.spinner-12 > div {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    position: relative;
+    background-color: black;
+    border-radius: 50%;
+    animation: spinner-12 2s infinite ease-in-out;
+}
+.spinner-12 > div:nth-child(1) {
+    animation-delay: 0s;
+    left: -15px;
+}
+.spinner-12 > div:nth-child(2) {
+    animation-delay: -.1s;
+    left: -5px;
+}
+.spinner-12 > div:nth-child(3) {
+    animation-delay: -.2s;
+    left: 5px;
+}
+.spinner-12 > div:nth-child(4) {
+    animation-delay: -.3s;
+    left: 15px;
+}
+@keyframes spinner-12 {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    33% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    67% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100px);
+        opacity: 0;
     }
 }
