@@ -47,32 +47,33 @@ table {
 /*--------------------------------------------------------------------------*/
 
 .spinner-collection {
-    width: 800px;
+    width: 1000px;
     margin: 0 auto;
+}
+@media (max-width: 1050px) {
+    .spinner-collection  {
+        width: 750px;
+    }
 }
 @media (max-width: 800px) {
     .spinner-collection  {
-        width: 600px;
+        width: 500px;
     }
 }
-@media (max-width: 600px) {
+@media (max-width: 550px) {
     .spinner-collection  {
-        width: 400px;
-    }
-}
-@media (max-width: 400px) {
-    .spinner-collection  {
-        width: 200px;
+        width: 250px;
     }
 }
 .spinner-container {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     float: left;
+    overflow: hidden;
     /*box-sizing: border-box;
     border: 1px solid black;*/
 }
@@ -621,5 +622,68 @@ table {
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+
+.spinner-16 {
+    border: 5px solid black;
+    border-radius: 50%;
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    animation: spinner-16 2s infinite linear;
+}
+.spinner-16 > div {
+    height: 50%;
+}
+.spinner-16 > div::before,
+.spinner-16 > div::after {
+    content: "";
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+.spinner-16 > div:nth-child(1) {
+    background-color: black;
+}
+.spinner-16 > div:nth-child(1)::before {
+    background-color: black;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    top: 50%;
+}
+.spinner-16 > div:nth-child(1)::after {
+    background-color: white;
+    width: 10%;
+    height: 20%;
+    left: -30%;
+    top: 10%;
+}
+.spinner-16 > div:nth-child(2) {
+    background-color: white;
+}
+.spinner-16 > div:nth-child(2)::before {
+    background-color: white;
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    top: -50%;
+}
+.spinner-16 > div:nth-child(2)::after {
+    background-color: black;
+    width: 10%;
+    height: 20%;
+    left: 20%;
+    top: -90%;
+}
+@keyframes spinner-16 {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }
