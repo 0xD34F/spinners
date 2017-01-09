@@ -554,3 +554,45 @@ table {
         transform: scale(10);
     }
 }
+
+
+.spinner-14 {
+    width: 75px;
+    height: 75px;
+    background-color: white;
+    border-width: 20px;
+    border-style: solid;
+    animation: spinner-14 .8s infinite steps(4);
+}
+@keyframes spinner-14 {
+    0% {
+        border-top-color: #000;
+        border-right-color: #CCC;
+        border-bottom-color: #CCC;
+        border-left-color: #CCC;
+    }
+    25% {
+        border-top-color: #CCC;
+        border-right-color: #000;
+        border-bottom-color: #CCC;
+        border-left-color: #CCC;
+    }
+    50% {
+        border-top-color: #CCC;
+        border-right-color: #CCC;
+        border-bottom-color: #000;
+        border-left-color: #CCC;
+    }
+    75% {
+        border-top-color: #CCC;
+        border-right-color: #CCC;
+        border-bottom-color: #CCC;
+        border-left-color: #000;
+    }
+    100% {
+        border-top-color: #000;
+        border-right-color: #CCC;
+        border-bottom-color: #CCC;
+        border-left-color: #CCC;
+    }
+}
