@@ -596,3 +596,33 @@ table {
         border-left-color: #CCC;
     }
 }
+
+
+.spinner-15 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 12px solid #EEE;
+    box-sizing: border-box;
+    position: relative;
+}
+.spinner-15::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    transform-origin: 36px 36px;
+    background-color: black;
+    border-radius: 50%;
+    animation: spinner-15 1.5s infinite linear;
+}
+@keyframes spinner-15 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
