@@ -208,7 +208,7 @@ table {
     position: absolute;
     display: inline-block;
     box-sizing: border-box;
-    border: 10px solid transparent;
+    border: 5px solid transparent;
     border-top-color: black;
     border-radius: 50%;
     animation: spinner-5 2s infinite linear;
@@ -508,5 +508,49 @@ table {
     100% {
         transform: translateX(100px);
         opacity: 0;
+    }
+}
+
+
+.spinner-13 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+.spinner-13::before {
+    width: 10%;
+    height: 10%;
+    left: calc(50% - 5px);
+    top: calc(50% - 5px);
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    animation: spinner-13 1s infinite cubic-bezier(0, 0.25, 0.75, 1);
+}
+.spinner-13::after {
+    width: 10%;
+    height: 10%;
+    left: calc(50% - 5px);
+    top: calc(50% - 5px);
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    animation: spinner-13 1s infinite cubic-bezier(0, 0.25, 0.75, 1);
+    animation-delay: -.5s;
+}
+@keyframes spinner-13 {
+    0% {
+        opacity: 1;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(10);
     }
 }
