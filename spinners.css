@@ -687,3 +687,42 @@ table {
         transform: rotate(0deg);
     }
 }
+
+
+.spinner-17 {
+    border-radius: 50%;
+    background-color: transparent;
+    font-size: 10px;
+    width: 1.5em;
+    height: 1.5em;
+    animation: spinner-17 1s infinite steps(8);
+}
+@keyframes spinner-17 {
+    0% {
+        box-shadow: 0 -2.8em #000, 2em -2em #DDD, 2.8em 0 #DDD, 2em 2em #DDD, 0 2.8em #DDD, -2em 2em #DDD, -2.8em 0 #DDD, -2em -2em #DDD;
+    }
+    12.5% {
+        box-shadow: 0 -2.8em #DDD, 2em -2em #000, 2.8em 0 #DDD, 2em 2em #DDD, 0 2.8em #DDD, -2em 2em #DDD, -2.8em 0 #DDD, -2em -2em #DDD;
+    }
+    25% {
+        box-shadow: 0 -2.8em #DDD, 2em -2em #DDD, 2.8em 0 #000, 2em 2em #DDD, 0 2.8em #DDD, -2em 2em #DDD, -2.8em 0 #DDD, -2em -2em #DDD;
+    }
+    37.5% {
+        box-shadow: 0 -2.8em #DDD, 2em -2em #DDD, 2.8em 0 #DDD, 2em 2em #000, 0 2.8em #DDD, -2em 2em #DDD, -2.8em 0 #DDD, -2em -2em #DDD;
+    }
+    50% {
+        box-shadow: 0 -2.8em #DDD, 2em -2em #DDD, 2.8em 0 #DDD, 2em 2em #DDD, 0 2.8em #000, -2em 2em #DDD, -2.8em 0 #DDD, -2em -2em #DDD;
+    }
+    62.5% {
+        box-shadow: 0 -2.8em #DDD, 2em -2em #DDD, 2.8em 0 #DDD, 2em 2em #DDD, 0 2.8em #DDD, -2em 2em #000, -2.8em 0 #DDD, -2em -2em #DDD;
+    }
+    75% {
+        box-shadow: 0 -2.8em #DDD, 2em -2em #DDD, 2.8em 0 #DDD, 2em 2em #DDD, 0 2.8em #DDD, -2em 2em #DDD, -2.8em 0 #000, -2em -2em #DDD;
+    }
+    87.5% {
+        box-shadow: 0 -2.8em #DDD, 2em -2em #DDD, 2.8em 0 #DDD, 2em 2em #DDD, 0 2.8em #DDD, -2em 2em #DDD, -2.8em 0 #DDD, -2em -2em #000;
+    }
+    100% {
+        box-shadow: 0 -2.8em #000, 2em -2em #DDD, 2.8em 0 #DDD, 2em 2em #DDD, 0 2.8em #DDD, -2em 2em #DDD, -2.8em 0 #DDD, -2em -2em #DDD;
+    }
+}
