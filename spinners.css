@@ -743,3 +743,51 @@ table {
         box-shadow: 0 -2.8em #000, 2em -2em #DDD, 2.8em 0 #DDD, 2em 2em #DDD, 0 2.8em #DDD, -2em 2em #DDD, -2.8em 0 #DDD, -2em -2em #DDD;
     }
 }
+
+
+.spinner-18 {
+    font-size: 8px;
+    width: 10em;
+    height: 10em;
+    border: 1.5em solid transparent;
+    border-top-color: black;
+    border-radius: 50%;
+    position: relative;
+    animation: spinner-18 4s infinite linear;
+}
+.spinner-18::before {
+    content: "";
+    display: inline-block;
+    width: 10em;
+    height: 10em;
+    border: 1.5em solid transparent;
+    border-top-color: black;
+    border-radius: 50%;
+    position: absolute;
+    left: -1.5em;
+    top: -1.5em;
+    transform: rotate(120deg);
+    box-sizing: border-box;
+}
+.spinner-18::after {
+    content: "";
+    display: inline-block;
+    width: 10em;
+    height: 10em;
+    border: 1.5em solid transparent;
+    border-top-color: black;
+    border-radius: 50%;
+    position: absolute;
+    left: -1.5em;
+    top: -1.5em;
+    transform: rotate(240deg);
+    box-sizing: border-box;
+}
+@keyframes spinner-18 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(720deg);
+    }
+}
