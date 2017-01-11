@@ -657,34 +657,34 @@ table {
 }
 .spinner-16 > div:nth-child(1)::before {
     background-color: black;
-    width: 50%;
-    height: 100%;
+    width: 4.5em;
+    height: 4.5em;
     left: 0;
-    top: 50%;
+    top: 2.25em;
 }
 .spinner-16 > div:nth-child(1)::after {
     background-color: white;
-    width: 10%;
-    height: 20%;
-    left: -30%;
-    top: 10%;
+    width: 1em;
+    height: 1em;
+    left: -2.75em;
+    top: .5em;
 }
 .spinner-16 > div:nth-child(2) {
     background-color: white;
 }
 .spinner-16 > div:nth-child(2)::before {
     background-color: white;
-    width: 50%;
-    height: 100%;
-    left: 50%;
-    top: -50%;
+    width: 4.5em;
+    height: 4.5em;
+    left: 4.5em;
+    top: -2.25em;
 }
 .spinner-16 > div:nth-child(2)::after {
     background-color: black;
-    width: 10%;
-    height: 20%;
-    left: 20%;
-    top: -90%;
+    width: 1em;
+    height: 1em;
+    left: 1.75em;
+    top: -4em;
 }
 @keyframes spinner-16 {
     0% {
