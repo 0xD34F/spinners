@@ -130,10 +130,10 @@ table {
     height: 1px;
     border-radius: 50%;
     background-color: transparent;
-    animation: spinner-3 2s infinite linear;
+    animation: spinner-3 1.5s infinite linear;
 }
 @keyframes spinner-3 {
-    0%, 100% {
+    0%, 70%, 100% {
         box-shadow: -3em 0 0 -1px, -1em 0 0 -1px, 1em 0 0 -1px, 3em 0 0 -1px;
     }
     10% {
@@ -154,9 +154,6 @@ table {
     60% {
         box-shadow: -3em 0 0 -1px, -1em 0 0 -1px, 1em 0 0 -1px, 3em 0 0 .5em;
     }
-    70% {
-        box-shadow: -3em 0 0 -1px, -1em 0 0 -1px, 1em 0 0 -1px, 3em 0 0 -1px;
-    }
 }
 
 
@@ -173,7 +170,7 @@ table {
     display: inline-block;
     background-color: black;
     animation: spinner-4 1s infinite ease-in-out;
-    margin: 0 .5em;
+    margin: 0 1px;
 }
 .spinner-4 > div:nth-child(1) {
     animation-delay: -.45s;
@@ -188,10 +185,10 @@ table {
     animation-delay: 0s;
 }
 @keyframes spinner-4 {
-    0%, 100% {
+    0%, 30%, 100% {
         height: 5em;
     }
-    50% {
+    15% {
         height: 10em;
     }
 }
@@ -748,20 +745,7 @@ table {
     position: relative;
     animation: spinner-18 4s infinite linear;
 }
-.spinner-18::before {
-    content: "";
-    display: inline-block;
-    width: 10em;
-    height: 10em;
-    border: 1.5em solid transparent;
-    border-top-color: black;
-    border-radius: 50%;
-    position: absolute;
-    left: -1.5em;
-    top: -1.5em;
-    transform: rotate(120deg);
-    box-sizing: border-box;
-}
+.spinner-18::before,
 .spinner-18::after {
     content: "";
     display: inline-block;
@@ -773,8 +757,13 @@ table {
     position: absolute;
     left: -1.5em;
     top: -1.5em;
-    transform: rotate(240deg);
     box-sizing: border-box;
+}
+.spinner-18::before {
+    transform: rotate(120deg);
+}
+.spinner-18::after {
+    transform: rotate(240deg);
 }
 @keyframes spinner-18 {
     0% {
@@ -782,5 +771,43 @@ table {
     }
     100% {
         transform: rotate(720deg);
+    }
+}
+
+
+.spinner-19 {
+    font-size: 10px;
+    width: 5em;
+    height: 5em;
+    position: relative;
+    background-color: black;
+    animation: spinner-19 .5s infinite cubic-bezier(1, 0, 1, 1);
+}
+.spinner-19::before,
+.spinner-19::after {
+    content: "";
+    display: inline-block;
+    width: 5em;
+    height: 5em;
+    position: absolute;
+    border-radius: 50%;
+    background-color: black;
+}
+.spinner-19::before {
+    left: 0em;
+    top: -2.5em;
+ }
+.spinner-19::after {
+    left: -2.5em;
+    top: 0em;
+}
+@keyframes spinner-19 {
+    0% {
+        transform: scale(0.7) rotate(45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) rotate(45deg);
+        opacity: 0.7;
     }
 }
