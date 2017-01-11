@@ -126,43 +126,36 @@ table {
 
 .spinner-3 {
     font-size: 10px;
-    width: 10em;
-    height: 10em;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-.spinner-3 > div {
-    width: .5em;
-    height: .5em;
-    display: inline-block;
-    position: relative;
-    background-color: black;
+    width: 1px;
+    height: 1px;
     border-radius: 50%;
-    animation: spinner-3 2.5s infinite ease-in-out;
-}
-.spinner-3 > div:nth-child(1) {
-    animation-delay: 0s;
-    left: -30%;
-}
-.spinner-3 > div:nth-child(2) {
-    animation-delay: .25s;
-    left: -10%;
-}
-.spinner-3 > div:nth-child(3) {
-    animation-delay: .5s;
-    left: 10%;
-}
-.spinner-3 > div:nth-child(4) {
-    animation-delay: .75s;
-    left: 30%;
+    background-color: transparent;
+    animation: spinner-3 2s infinite linear;
 }
 @keyframes spinner-3 {
-    0%, 50% {
-        transform: scale(1);
+    0%, 100% {
+        box-shadow: -3em 0 0 -1px, -1em 0 0 -1px, 1em 0 0 -1px, 3em 0 0 -1px;
     }
-    25% {
-        transform: scale(4);
+    10% {
+        box-shadow: -3em 0 0 .5em, -1em 0 0 -1px, 1em 0 0 -1px, 3em 0 0 -1px;
+    }
+    20% {
+        box-shadow: -3em 0 0 1em, -1em 0 0 .5em, 1em 0 0 -1px, 3em 0 0 -1px;
+    }
+    30% {
+        box-shadow: -3em 0 0 .5em, -1em 0 0 1em, 1em 0 0 .5em, 3em 0 0 -1px;
+    }
+    40% {
+        box-shadow: -3em 0 0 -1px, -1em 0 0 .5em, 1em 0 0 1em, 3em 0 0 .5em;
+    }
+    50% {
+        box-shadow: -3em 0 0 -1px, -1em 0 0 -1px, 1em 0 0 .5em, 3em 0 0 1em;
+    }
+    60% {
+        box-shadow: -3em 0 0 -1px, -1em 0 0 -1px, 1em 0 0 -1px, 3em 0 0 .5em;
+    }
+    70% {
+        box-shadow: -3em 0 0 -1px, -1em 0 0 -1px, 1em 0 0 -1px, 3em 0 0 -1px;
     }
 }
 
