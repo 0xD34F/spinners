@@ -121,33 +121,40 @@ table {
 
 .spinner-3 {
     font-size: 10px;
-    width: 1px;
-    height: 1px;
-    border-radius: 50%;
+    width: 10em;
+    height: 10em;
     background-color: transparent;
-    animation: spinner-3 1.5s infinite linear;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.spinner-3 > div {
+    width: 2em;
+    height: 2em;
+    display: inline-block;
+    background-color: black;
+    border-radius: 50%;
+    animation: spinner-3 2s infinite ease-in-out;
+    margin: 0 .2em;
+}
+.spinner-3 > div:nth-child(1) {
+    animation-delay: -.6s;
+}
+.spinner-3 > div:nth-child(2) {
+    animation-delay: -.4s;
+}
+.spinner-3 > div:nth-child(3) {
+    animation-delay: -.2s;
+}
+.spinner-3 > div:nth-child(4) {
+    animation-delay: 0s;
 }
 @keyframes spinner-3 {
-    0%, 70%, 100% {
-        box-shadow: -3em 0 0 -1px, -1em 0 0 -1px, 1em 0 0 -1px, 3em 0 0 -1px;
+    0%, 50%, 100% {
+        transform: scale(0);
     }
-    10% {
-        box-shadow: -3em 0 0 .5em, -1em 0 0 -1px, 1em 0 0 -1px, 3em 0 0 -1px;
-    }
-    20% {
-        box-shadow: -3em 0 0 1em, -1em 0 0 .5em, 1em 0 0 -1px, 3em 0 0 -1px;
-    }
-    30% {
-        box-shadow: -3em 0 0 .5em, -1em 0 0 1em, 1em 0 0 .5em, 3em 0 0 -1px;
-    }
-    40% {
-        box-shadow: -3em 0 0 -1px, -1em 0 0 .5em, 1em 0 0 1em, 3em 0 0 .5em;
-    }
-    50% {
-        box-shadow: -3em 0 0 -1px, -1em 0 0 -1px, 1em 0 0 .5em, 3em 0 0 1em;
-    }
-    60% {
-        box-shadow: -3em 0 0 -1px, -1em 0 0 -1px, 1em 0 0 -1px, 3em 0 0 .5em;
+    25% {
+        transform: scale(1);
     }
 }
 
