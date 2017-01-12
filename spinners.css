@@ -816,3 +816,47 @@ table {
         opacity: 0.7;
     }
 }
+
+
+.spinner-20 {
+    font-size: 10px;
+    width: 10em;
+    height: 10em;
+    background-color: white;
+    border-radius: 50%;
+    border: 1em solid transparent;
+    border-left-color: black;
+    box-sizing: border-box;
+    position: relative;
+    animation: spinner-20 .7s infinite linear;
+}
+.spinner-20::before {
+    content: "";
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    left: 3.5em;
+    top: -1em;
+    background-color: black;
+    border-radius: 50%;
+    transform-origin: .5em 5em;
+    transform: rotate(-45deg);
+}
+.spinner-20::after {
+    content: "";
+    width: 7em;
+    height: 8em;
+    position: absolute;
+    left: -.5em;
+    top: .7em;
+    background-color: white;
+    border-radius: 50%;
+}
+@keyframes spinner-20 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
