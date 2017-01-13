@@ -521,31 +521,24 @@ table {
     height: 10em;
     position: relative;
 }
-.spinner-13::before {
-    width: 10%;
-    height: 10%;
-    left: calc(50% - .5em);
-    top: calc(50% - .5em);
+.spinner-13::before,
+.spinner-13::after {
     content: "";
     background-color: transparent;
     position: absolute;
+    left: 4.5em;
+    top: 4.5em;
+    width: 1em;
+    height: 1em;
     border-radius: 50%;
     box-sizing: border-box;
-    border: .1em solid black;
+    border: .2em solid black;
     animation: spinner-13 1s infinite cubic-bezier(0, 0.25, 0.75, 1);
 }
+.spinner-13::before {
+    animation-delay: 0s;
+}
 .spinner-13::after {
-    width: 10%;
-    height: 10%;
-    left: calc(50% - .5em);
-    top: calc(50% - .5em);
-    content: "";
-    background-color: transparent;
-    position: absolute;
-    border-radius: 50%;
-    box-sizing: border-box;
-    border: .1em solid black;
-    animation: spinner-13 1s infinite cubic-bezier(0, 0.25, 0.75, 1);
     animation-delay: -.5s;
 }
 @keyframes spinner-13 {
