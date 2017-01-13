@@ -913,3 +913,43 @@ table {
         transform: translate(-6em, -6em);
     }
 }
+
+
+.spinner-22 {
+    font-size: 8px;
+    width: 10em;
+    height: 10em;
+    position: relative;
+    border: 1.5em solid transparent;
+    border-top-color: black;
+    border-bottom-color: black;
+    border-radius: 50%;
+    animation: spinner-22 1s infinite linear;
+}
+.spinner-22::before,
+.spinner-22::after {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    border: 1em solid transparent;
+}
+.spinner-22::before {
+    left: 5.4em;
+    top: -.6em;
+    border-right-color: black;
+    border-bottom-color: black;
+}
+.spinner-22::after {
+    left: -.5em;
+    top: 5.6em;
+    border-top-color: black;
+    border-left-color: black;
+}
+@keyframes spinner-22 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
