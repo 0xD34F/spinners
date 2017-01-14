@@ -1035,3 +1035,125 @@ table {
         transform: rotate(360deg);
     }
 }
+
+
+.spinner-24 {
+    font-size: 8px;
+    width: 10em;
+    height: 10em;
+    position: relative;
+}
+.spinner-24::before,
+.spinner-24::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    left: 0em;
+    top: 0em;
+}
+.spinner-24::before {
+    animation: spinner-24-before 1s infinite linear;
+}
+.spinner-24::after {
+    animation: spinner-24-after 1s infinite linear;
+}
+@keyframes spinner-24-before {
+    0%, 100% {
+        width: 1.5em;
+        height: 1.5em;
+        left: 0em;
+        top: 0em;
+    }
+    24% {
+        width: 10em;
+        height: 1.5em;
+        left: 0em;
+        top: 0em;
+    }
+    25% {
+        width: 1.5em;
+        height: 1.5em;
+        left: 8.5em;
+        top: 0em;
+    }
+    49% {
+        width: 1.5em;
+        height: 10em;
+        left: 8.5em;
+        top: 0em;
+    }
+    50% {
+        width: 1.5em;
+        height: 1.5em;
+        left: 8.5em;
+        top: 8.5em;
+    }
+    74% {
+        width: 10em;
+        height: 1.5em;
+        left: 0em;
+        top: 8.5em;
+    }
+    75% {
+        width: 1.5em;
+        height: 1.5em;
+        left: 0em;
+        top: 8.5em;
+    }
+    99% {
+        width: 1.5em;
+        height: 10em;
+        left: 0em;
+        top: 0em;
+    }
+}
+@keyframes spinner-24-after {
+    0%, 100% {
+        width: 1.5em;
+        height: 10em;
+        left: 0em;
+        top: 0em;
+    }
+    24% {
+        width: 1.5em;
+        height: 1.5em;
+        left: 0em;
+        top: 0em;
+    }
+    25% {
+        width: 10em;
+        height: 1.5em;
+        left: 0em;
+        top: 0em;
+    }
+    49% {
+        width: 1.5em;
+        height: 1.5em;
+        left: 8.5em;
+        top: 0em;
+    }
+    50% {
+        width: 1.5em;
+        height: 10em;
+        left: 8.5em;
+        top: 0em;
+    }
+    74% {
+        width: 1.5em;
+        height: 1.5em;
+        left: 8.5em;
+        top: 8.5em;
+    }
+    75% {
+        width: 10em;
+        height: 1.5em;
+        left: 0em;
+        top: 8.5em;
+    }
+    99% {
+        width: 1.5em;
+        height: 1.5em;
+        left: 0em;
+        top: 8.5em;
+    }
+}
