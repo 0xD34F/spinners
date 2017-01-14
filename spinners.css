@@ -557,7 +557,6 @@ table {
     font-size: 10px;
     width: 7.5em;
     height: 7.5em;
-    background-color: white;
     border-width: 2em;
     border-style: solid;
     animation: spinner-14 .8s infinite steps(4);
