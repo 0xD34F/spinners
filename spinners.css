@@ -396,9 +396,9 @@ table {
 
 .spinner-10 {
     font-size: 10px;
-    width: 8em;
-    height: 3em;
-    border: .2em solid black;
+    width: 10em;
+    height: 4em;
+    border: .5em solid black;
     overflow: hidden;
 }
 .spinner-10::before {
@@ -406,7 +406,7 @@ table {
     background: repeating-linear-gradient(45deg, black, black 1em, white 1em, white 2em);
     position: relative;
     display: inline-block;
-    width: 8em;
+    width: 10em;
     animation: spinner-10 .5s infinite linear;
 }
 @keyframes spinner-10 {
