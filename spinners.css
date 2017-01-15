@@ -427,28 +427,26 @@ table {
     border: .4em solid black;
     border-radius: 50%;
 }
-.spinner-11::before {
-    content: "";
-    display: inline-block;
-    background-color: black;
-    position: relative;
-    width: .4em;
-    height: 4em;
-    transform-origin: .2em 3.8em;
-    border-radius: .4em;
-    left: 4.4em;
-    top: .8em;
-    animation: spinner-11 1s infinite linear;
-}
+.spinner-11::before,
 .spinner-11::after {
     content: "";
     display: inline-block;
     background-color: black;
     position: relative;
+    border-radius: .4em;
+}
+.spinner-11::before {
+    width: .4em;
+    height: 4em;
+    transform-origin: .2em 3.8em;
+    left: 4.4em;
+    top: .8em;
+    animation: spinner-11 1s infinite linear;
+}
+.spinner-11::after {
     width: .4em;
     height: 3em;
     transform-origin: .2em 2.8em;
-    border-radius: .4em;
     left: 4em;
     top: .8em;
     animation: spinner-11 12s infinite linear;
