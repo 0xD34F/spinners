@@ -325,42 +325,43 @@ table {
 }
 
 
-.spinner-8 {
-    font-size: 10px;
-    width: 3em;
+.spinner-8{
+    font-size: 20px;
+    width: 2.2em;
     height: 2em;
+    position: relative;
     overflow: hidden;
     font-family: Arial, sans-serif;
 }
-.spinner-8  > div {
+.spinner-8::before,
+.spinner-8::after {
     animation: spinner-8 1s infinite steps(10);
     display: inline-block;
-    width: 1em;
-}
-.spinner-8  > div:nth-child(1) {
-    animation-duration: 100s;
-}
-.spinner-8  > div:nth-child(2) {
-    animation-duration: 10s;
-}
-.spinner-8  > div:nth-child(3) {
-    animation-duration: 1s;
-}
-.spinner-8 > div::before {
     content: "0123456789";
-    width: 1em;
-    height: 2em;
+    width: .5em;
+    height: 10em;
+    top: 0em;
     font-size: 2em;
+    font-family: monospace;
+    font-weight: bold;
     word-wrap: break-word;
     text-overflow: clip;
     position: absolute;
+}
+.spinner-8::before {
+    left: 0em;
+    animation-duration: 10s;
+}
+.spinner-8::after {
+    left: .5em;
+    animation-duration: 1s;
 }
 @keyframes spinner-8 {
     0% {
         transform: translateY(0);
     }
     100% {
-        transform: translateY(-20em);
+        transform: translateY(-10em);
     }
 }
 
