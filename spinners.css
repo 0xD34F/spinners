@@ -823,33 +823,23 @@ table {
     height: 10em;
     background-color: white;
     border-radius: 50%;
-    border: 1em solid transparent;
-    border-left-color: black;
+    border-top: 1.4em solid transparent;
+    border-left: 1em solid black;
     box-sizing: border-box;
     position: relative;
     animation: spinner-20 .7s infinite linear;
 }
 .spinner-20::before {
     content: "";
-    width: 1em;
-    height: 1em;
+    width: 1.2em;
+    height: 1.2em;
     position: absolute;
     left: 3.5em;
-    top: -1em;
+    top: -1.2em;
     background-color: black;
     border-radius: 50%;
-    transform-origin: .5em 5em;
+    transform-origin: .5em 5.4em;
     transform: rotate(-45deg);
-}
-.spinner-20::after {
-    content: "";
-    width: 7em;
-    height: 8em;
-    position: absolute;
-    left: -.5em;
-    top: .7em;
-    background-color: white;
-    border-radius: 50%;
 }
 @keyframes spinner-20 {
     0% {
