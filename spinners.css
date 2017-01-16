@@ -478,54 +478,47 @@ table {
 
 
 .spinner-12 {
-    font-size: 10px;
-    width: 10em;
-    height: 10em;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-.spinner-12 > div {
+    font-size: 15px;
     width: 1em;
     height: 1em;
-    display: inline-block;
-    position: relative;
-    background-color: black;
+    margin: 2em 8.5em 4em 8.5em;
+    background-color: transparent;
     border-radius: 50%;
-    animation: spinner-12 2s infinite ease-in-out;
-}
-.spinner-12 > div:nth-child(1) {
-    animation-delay: 0s;
-    left: -1.5em;
-}
-.spinner-12 > div:nth-child(2) {
-    animation-delay: -.1s;
-    left: -.5em;
-}
-.spinner-12 > div:nth-child(3) {
-    animation-delay: -.2s;
-    left: .5em;
-}
-.spinner-12 > div:nth-child(4) {
-    animation-delay: -.3s;
-    left: 1.5em;
+    animation: spinner-12 2s infinite linear;
 }
 @keyframes spinner-12 {
     0% {
-        transform: translateX(-10em);
-        opacity: 0;
+        box-shadow: -8em 1em transparent, -6em 1em transparent, -4em 1em transparent;
     }
-    33% {
-        transform: translateX(0);
-        opacity: 1;
+    5% {
+        box-shadow: -8em 1em transparent, -6em 1em transparent, -2em 1em #CCC;
     }
-    67% {
-        transform: translateX(0);
-        opacity: 1;
+    10% {
+        box-shadow: -8em 1em transparent, -4em 1em #CCC, 0em 1em;
+    }
+    15% {
+        box-shadow: -6em 1em #CCC, -2em 1em, 2em 1em;
+    }
+    20% {
+        box-shadow: -4em 1em, 0em 1em, 2em 1em;
+    }
+    25%, 75% {
+        box-shadow: -2em 1em, 0em 1em, 2em 1em;
+    }
+    80% {
+        box-shadow: -2em 1em, 0em 1em, 4em 1em;
+    }
+    85% {
+        box-shadow: -2em 1em, 2em 1em, 6em 1em #CCC;
+    }
+    90% {
+        box-shadow: 0em 1em, 4em 1em #CCC, 8em 1em transparent;
+    }
+    95% {
+        box-shadow: 2em 1em #CCC, 6em 1em transparent, 8em 1em transparent;
     }
     100% {
-        transform: translateX(10em);
-        opacity: 0;
+        box-shadow: 4em 1em transparent, 6em 1em transparent, 8em 1em transparent;
     }
 }
 
