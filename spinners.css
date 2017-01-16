@@ -1141,3 +1141,67 @@ table {
         top: 8.5em;
     }
 }
+
+
+.spinner-25 {
+    font-size: 8px;
+    width: 11em;
+    height: 11em;
+    border: .5em solid black;
+    position: relative;
+    overflow: hidden;
+}
+.spinner-25::before,
+.spinner-25::after {
+    content: "";
+    position: absolute;
+}
+.spinner-25::before {
+    width: 14em;
+    height: 14em;
+    background: repeating-linear-gradient(0deg, black, black 1px, transparent 1px, transparent 2em), repeating-linear-gradient(90deg, black, black 1px, white 1px, white 2em);
+    animation: spinner-25-grid .4s infinite linear;
+}
+.spinner-25::after {
+    width: 2em;
+    height: 2em;
+    background-color: transparent;
+    animation: spinner-25-cells .4s infinite linear, spinner-25-prime-cell .4s infinite linear;
+}
+@keyframes spinner-25-grid {
+    0% {
+        left: -1.5em;
+        top: -.5em;
+    }
+    100% {
+        left: -3.5em;
+        top: -2.5em;
+    }
+}
+@keyframes spinner-25-prime-cell {
+    0% {
+        left: 2.5em;
+        top: 1.5em;
+    }
+    100% {
+        left: .5em;
+        top: -.5em;
+    }
+}
+@keyframes spinner-25-cells {
+    0%, 24% {
+        box-shadow: 2em 0em, 0em 2em transparent, 2em 2em transparent, 4em 2em, 0em 4em, 2em 4em, 4em 4em, 6em 4em transparent, 2em 6em transparent, 4em 6em transparent, 6em 6em transparent;
+    }
+    25%, 49% {
+        box-shadow: 2em 0em transparent, 0em 2em, 2em 2em transparent, 4em 2em, 0em 4em transparent, 2em 4em, 4em 4em, 6em 4em transparent, 2em 6em, 4em 6em transparent, 6em 6em transparent;
+    }
+    50%, 74% {
+        box-shadow: 2em 0em transparent, 0em 2em transparent, 2em 2em transparent, 4em 2em, 0em 4em, 2em 4em transparent, 4em 4em, 6em 4em transparent, 2em 6em, 4em 6em, 6em 6em transparent;
+    }
+    75%, 99% {
+        box-shadow: 2em 0em transparent, 0em 2em transparent, 2em 2em, 4em 2em transparent, 0em 4em transparent, 2em 4em transparent, 4em 4em, 6em 4em, 2em 6em, 4em 6em, 6em 6em transparent;
+    }
+    100% {
+        box-shadow: 2em 0em transparent, 0em 2em transparent, 2em 2em transparent, 4em 2em, 0em 4em transparent, 2em 4em transparent, 4em 4em transparent, 6em 4em, 2em 6em, 4em 6em, 6em 6em;
+    }
+}
