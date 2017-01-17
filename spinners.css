@@ -368,31 +368,29 @@ table {
 
 
 .spinner-9 {
-    width: 1px;
-    height: 1px;
-    margin: 3.5em;
     font-size: 10px;
+    width: 1em;
+    height: 1em;
+    margin: 1em 5.5em 5em 5.5em;
     border-radius: 50%;
+    animation: spinner-9 1s infinite linear;
     background-color: transparent;
-    animation: spinner-9-rotate 1s infinite linear, spinner-9-shadow 1s infinite ease-out;
 }
-@keyframes spinner-9-rotate {
-    0% {
-        transform: rotate(0deg);
+@keyframes spinner-9 {
+    0%, 75%, 100% {
+        box-shadow: -4.5em 2em 0 .5em #CCC, -1.5em 2em 0 .5em #CCC, 1.5em 2em 0 .5em #CCC, 4.5em 2em 0 .5em #CCC;
     }
-    100% {
-        transform: rotate(360deg);
+    15% {
+        box-shadow: -4.5em 2em 0 .7em #000, -1.5em 2em 0 .5em #CCC, 1.5em 2em 0 .5em #CCC, 4.5em 2em 0 .5em #CCC;
     }
-}
-@keyframes spinner-9-shadow {
-    0% {
-        box-shadow: 0 0 0 .5em, 0 0 0 .5em, 0 0 0 .5em, 0 0 0 .5em;
+    30% {
+        box-shadow: -4.5em 2em 0 .5em #CCC, -1.5em 2em 0 .7em #000, 1.5em 2em 0 .5em #CCC, 4.5em 2em 0 .5em #CCC;
     }
-    50% {
-        box-shadow: 0 3em 0 .5em, 3em 0 0 .5em, 0 -3em 0 .5em, -3em 0 0 .5em;
+    45% {
+        box-shadow: -4.5em 2em 0 .5em #CCC, -1.5em 2em 0 .5em #CCC, 1.5em 2em 0 .7em #000, 4.5em 2em 0 .5em #CCC;
     }
-    100% {
-        box-shadow: 0 0 0 .5em, 0 0 0 .5em, 0 0 0 .5em, 0 0 0 .5em;
+    60% {
+        box-shadow: -4.5em 2em 0 .5em #CCC, -1.5em 2em 0 .5em #CCC, 1.5em 2em 0 .5em #CCC, 4.5em 2em 0 .7em #000;
     }
 }
 
