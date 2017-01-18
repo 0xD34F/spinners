@@ -1,90 +1,3 @@
-/*-CSS-reset----------------------------------------------------------------*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-body {
-    line-height: 1;
-}
-ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-/*--------------------------------------------------------------------------*/
-
-.spinner-collection {
-    width: 1000px;
-    margin: 0 auto;
-}
-@media (max-width: 1050px) {
-    .spinner-collection  {
-        width: 750px;
-    }
-}
-@media (max-width: 800px) {
-    .spinner-collection  {
-        width: 500px;
-    }
-}
-@media (max-width: 550px) {
-    .spinner-collection  {
-        width: 250px;
-    }
-}
-.spinner-container {
-    width: 250px;
-    height: 250px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    float: left;
-    overflow: hidden;
-    /*box-sizing: border-box;
-    border: 1px solid black;*/
-}
-
-
-.spinner {
-    display: inline-block;
-    box-sizing: border-box;
-}
-
-
 .spinner-1 {
     font-size: 10px;
     background-color: transparent;
@@ -335,8 +248,8 @@ table {
     font-size: 10px;
     width: 6em;
     height: 6em;
-    border-width: 3em;
-    border-style: solid;
+    border: 3em solid #CCC;
+    box-sizing: border-box;
     animation: spinner-8 .8s infinite steps(4);
 }
 @keyframes spinner-8 {
@@ -364,6 +277,7 @@ table {
     border: 1.5em solid #DDD;
     border-radius: 50%;
     border-top-color: black;
+    box-sizing: border-box;
     width: 10em;
     height: 10em;
     animation: spinner-9 1s infinite linear;
@@ -374,7 +288,7 @@ table {
     }
     100% {
         transform: rotate(360deg);
-    }	
+    }
 }
 
 
@@ -384,6 +298,7 @@ table {
     border-radius: 50%;
     border-right-color: black;
     border-left-color: black;
+    box-sizing: border-box;
     width: 10em;
     height: 10em;
     animation: spinner-10 1s infinite linear;
@@ -407,6 +322,7 @@ table {
     border-top-color: black;
     border-bottom-color: black;
     border-radius: 50%;
+    box-sizing: border-box;
     animation: spinner-11 1s infinite linear;
 }
 .spinner-11::before,
@@ -440,27 +356,25 @@ table {
 
 .spinner-12 {
     font-size: 8px;
+    position: relative;
+    animation: spinner-12 2s infinite linear;
+}
+.spinner-12,
+.spinner-12::before,
+.spinner-12::after {
     width: 10em;
     height: 10em;
     border: 1.5em solid transparent;
     border-top-color: black;
     border-radius: 50%;
-    position: relative;
-    animation: spinner-12 2s infinite linear;
+    box-sizing: border-box;
 }
 .spinner-12::before,
 .spinner-12::after {
     content: "";
-    display: inline-block;
-    width: 10em;
-    height: 10em;
-    border: 1.5em solid transparent;
-    border-top-color: black;
-    border-radius: 50%;
     position: absolute;
     left: -1.5em;
     top: -1.5em;
-    box-sizing: border-box;
 }
 .spinner-12::before {
     transform: rotate(120deg);
@@ -714,7 +628,6 @@ table {
 .spinner-heart::before,
 .spinner-heart::after {
     content: "";
-    display: inline-block;
     position: absolute;
     background-color: black;
 }
@@ -774,7 +687,7 @@ table {
 }
 
 
-.spinner-ying-yang {
+.spinner-yin-yang {
     font-size: 10px;
     width: 11em;
     height: 11em;
@@ -783,29 +696,30 @@ table {
     background-color: black;
     position: relative;
     box-shadow: inset 0 -10005em 0 -10000em white;
-    animation: spinner-ying-yang 2s infinite linear;
+    box-sizing: border-box;
+    animation: spinner-yin-yang 2s infinite linear;
 }
-.spinner-ying-yang::before,
-.spinner-ying-yang::after {
+.spinner-yin-yang::before,
+.spinner-yin-yang::after {
     content: "";
     position: absolute;
     width: 1em;
     height: 1em;
     border-radius: 50%;
 }
-.spinner-ying-yang::before {
+.spinner-yin-yang::before {
     left: 2em;
     top: 4.5em;
     background-color: #000;
     box-shadow: 0 0 0 2em #FFF;
 }
-.spinner-ying-yang::after {
+.spinner-yin-yang::after {
     left: 7em;
     top: 4.5em;
     background-color: #FFF;
     box-shadow: 0 0 0 2em #000;
 }
-@keyframes spinner-ying-yang {
+@keyframes spinner-yin-yang {
     0% {
         transform: rotate(0deg);
     }
@@ -819,31 +733,30 @@ table {
     font-size: 10px;
     width: 10em;
     height: 10em;
+    position: relative;
     border: .4em solid black;
     border-radius: 50%;
+    box-sizing: border-box;
 }
 .spinner-clock::before,
 .spinner-clock::after {
     content: "";
-    display: inline-block;
+    width: .4em;
     background-color: black;
-    position: relative;
+    position: absolute;
+    left: 4.4em;
     border-radius: .4em;
 }
 .spinner-clock::before {
-    width: .4em;
     height: 4em;
     transform-origin: .2em 3.8em;
-    left: 4.4em;
     top: .8em;
     animation: spinner-clock 1s infinite linear;
 }
 .spinner-clock::after {
-    width: .4em;
     height: 3em;
     transform-origin: .2em 2.8em;
-    left: 4em;
-    top: .8em;
+    top: 1.8em;
     animation: spinner-clock 12s infinite linear;
 }
 @keyframes spinner-clock {
@@ -867,7 +780,6 @@ table {
 .spinner-counter::before,
 .spinner-counter::after {
     animation: spinner-counter 1s infinite steps(10);
-    display: inline-block;
     content: "0123456789";
     width: .5em;
     height: 10em;
@@ -902,6 +814,7 @@ table {
     width: 10em;
     height: 4em;
     border: .5em solid black;
+    box-sizing: border-box;
     overflow: hidden;
 }
 .spinner-zebra::before {
@@ -928,6 +841,7 @@ table {
     height: 14em;
     border:  2em solid black;
     border-left-color: black;
+    box-sizing: border-box;
     position: relative;
 }
 .spinner-collisions::before {
@@ -1002,22 +916,22 @@ table {
 }
 @keyframes spinner-glider-grid {
     0% {
-        left: -1.5em;
-        top: -.5em;
+        left: -1em;
+        top: 0em;
     }
     100% {
-        left: -3.5em;
-        top: -2.5em;
+        left: -3em;
+        top: -2em;
     }
 }
 @keyframes spinner-glider-prime-cell {
     0% {
-        left: 2.5em;
-        top: 1.5em;
+        left: 3em;
+        top: 2em;
     }
     100% {
-        left: .5em;
-        top: -.5em;
+        left: 1em;
+        top: 0em;
     }
 }
 @keyframes spinner-glider-cells {
