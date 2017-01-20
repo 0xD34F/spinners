@@ -25,6 +25,7 @@
     border-radius: 50%;
     animation: spinner-2 1s infinite linear;
     background-color: transparent;
+    transform: translateZ(0);
 }
 @keyframes spinner-2 {
     0%, 75%, 100% {
@@ -99,6 +100,7 @@
     border-radius: 50%;
     animation: spinner-4 1.5s infinite linear;
     background-color: transparent;
+    transform: translateZ(0);
 }
 @keyframes spinner-4 {
     0%, 90%, 100% {
@@ -178,6 +180,7 @@
     animation: spinner-6 1s infinite linear;
     background-color: transparent;
     margin: 2em;
+    transform: translateZ(0);
 }
 @keyframes spinner-6 {
     0%, 100% {
