@@ -332,7 +332,7 @@
     border-bottom-color: black;
     border-radius: 50%;
     box-sizing: border-box;
-    animation: spinner-11 1s infinite linear;
+    animation: spinner-11 1.5s infinite linear;
 }
 .spinner-11::before,
 .spinner-11::after {
@@ -348,7 +348,7 @@
     border-bottom-color: black;
 }
 .spinner-11::after {
-    left: -.5em;
+    left: -.3em;
     top: 5.6em;
     border-top-color: black;
     border-left-color: black;
@@ -958,5 +958,60 @@
     }
     100% {
         box-shadow: 2em 0em transparent, 0em 2em transparent, 2em 2em transparent, 4em 2em, 0em 4em transparent, 2em 4em transparent, 4em 4em transparent, 6em 4em, 2em 6em, 4em 6em, 6em 6em;
+    }
+}
+
+
+.spinner-wi-fi {
+    font-size: 10px;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    margin: 3.5em 3.5em 1.5em 1.5em;
+    animation: spinner-wi-fi-core 1.2s infinite linear;
+    animation-delay: -.4s;
+}
+.spinner-wi-fi::before,
+.spinner-wi-fi::after {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    border: 1em solid transparent;
+    border-top-color: black;
+    border-radius: 50%;
+    animation: spinner-wi-fi-signal 1.2s infinite linear;
+}
+.spinner-wi-fi::before {
+    width: 3em;
+    height: 3em;
+    left: -1.5em;
+    top: -1.5em;
+    animation-delay: -.2s;
+}
+.spinner-wi-fi::after {
+    width: 6em;
+    height: 6em;
+    left: -3em;
+    top: -3em;
+    animation-delay: 0s;
+}
+@keyframes spinner-wi-fi-core {
+    0%, 30%, 100% {
+        background-color: black;
+    }
+    15% {
+        background-color: #888;
+    }
+}
+@keyframes spinner-wi-fi-signal {
+    0%, 30%, 100% {
+        border-top-color: black;
+        transform: scale(1) rotate(45deg);
+    }
+    15% {
+        border-top-color: #888;
+        transform: scale(1.1) rotate(45deg);
     }
 }
