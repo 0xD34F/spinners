@@ -626,6 +626,45 @@
 }
 
 
+.spinner-17 {
+    font-size: 8px;
+    width: 10em;
+    height: 10em;
+    position: relative;
+    animation: spinner-17 .9s infinite linear;
+}
+.spinner-17::before,
+.spinner-17::after {
+    content: "";
+    position: absolute;
+}
+.spinner-17::before {
+    width: 10em;
+    height: 5em;
+    left: 0;
+    top: 0;
+    background: linear-gradient(45deg, transparent, transparent 1.5em, transparent 1.5em, black 6em, black 6em, black);
+    border-radius: 5em 5em 0 0;
+}
+.spinner-17::after {
+    animation-delay: -.5s;
+    width: 7em;
+    height: 3.5em;
+    left: 1.5em;
+    top: 1.5em;
+    background-color: white;
+    border-radius: 3.5em 3.5em 0 0;
+}
+@keyframes spinner-17 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
 .spinner-heart {
     font-size: 10px;
     width: 10em;
