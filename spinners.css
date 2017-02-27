@@ -303,14 +303,32 @@
 
 .spinner-10 {
     font-size: 8px;
-    border: 1.5em solid transparent;
+    border: 1.5em solid black;
     border-radius: 50%;
-    border-right-color: black;
-    border-left-color: black;
+    border-top-color: transparent;
     box-sizing: border-box;
     width: 10em;
     height: 10em;
+    position: relative;
     animation: spinner-10 1s infinite linear;
+}
+.spinner-10::before,
+.spinner-10::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: black;
+    width: 1.5em;
+    height: 1.5em;
+    left: 2.75em;
+    top: -1.5em;
+    transform-origin: .75em 5em;
+}
+.spinner-10::before {
+    transform: rotate(-45deg);
+}
+.spinner-10::after {
+    transform: rotate(45deg);
 }
 @keyframes spinner-10 {
     0% {
