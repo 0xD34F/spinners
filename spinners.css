@@ -960,6 +960,7 @@
     width: 11em;
     height: 11em;
     border: .5em solid black;
+    background-color: white;
     position: relative;
     overflow: hidden;
 }
@@ -969,16 +970,16 @@
     position: absolute;
 }
 .spinner-glider::before {
-    width: 14em;
-    height: 14em;
-    background: repeating-linear-gradient(0deg, black, black 1px, transparent 1px, transparent 2em), repeating-linear-gradient(90deg, black, black 1px, white 1px, white 2em);
-    animation: spinner-glider-grid .4s infinite linear;
-}
-.spinner-glider::after {
     width: 2em;
     height: 2em;
     background-color: transparent;
     animation: spinner-glider-cells .4s infinite linear, spinner-glider-prime-cell .4s infinite linear;
+}
+.spinner-glider::after {
+    width: 14em;
+    height: 14em;
+    background: repeating-linear-gradient(0deg, #666, #666 1px, transparent 1px, transparent 2em), repeating-linear-gradient(90deg, #666, #666 1px, transparent 1px, transparent 2em);
+    animation: spinner-glider-grid .4s infinite linear;
 }
 @keyframes spinner-glider-grid {
     0% {
