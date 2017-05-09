@@ -432,12 +432,15 @@
     background-color: black;
     left: 0em;
     top: 0em;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 .spinner-13::before {
-    animation: spinner-13-before 1s infinite linear;
+    animation-name: spinner-13-before;
 }
 .spinner-13::after {
-    animation: spinner-13-after 1s infinite linear;
+    animation-name: spinner-13-after;
 }
 @keyframes spinner-13-before {
     0%, 100% {
@@ -968,18 +971,21 @@
 .spinner-glider::after {
     content: "";
     position: absolute;
+    animation-duration: .4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 .spinner-glider::before {
     width: 2em;
     height: 2em;
     background-color: transparent;
-    animation: spinner-glider-cells .4s infinite linear, spinner-glider-prime-cell .4s infinite linear;
+    animation-name: spinner-glider-cells, spinner-glider-prime-cell;
 }
 .spinner-glider::after {
     width: 14em;
     height: 14em;
     background: repeating-linear-gradient(0deg, #666, #666 1px, transparent 1px, transparent 2em), repeating-linear-gradient(90deg, #666, #666 1px, transparent 1px, transparent 2em);
-    animation: spinner-glider-grid .4s infinite linear;
+    animation-name: spinner-glider-grid;
 }
 @keyframes spinner-glider-grid {
     0% {
