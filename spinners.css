@@ -979,15 +979,15 @@
     width: 2em;
     height: 2em;
     background-color: transparent;
-    animation-name: spinner-glider-cells, spinner-glider-prime-cell;
+    animation-name: spinner-glider-shift, spinner-glider-cells;
 }
 .spinner-glider::after {
     width: 14em;
     height: 14em;
     background: repeating-linear-gradient(0deg, #666, #666 1px, transparent 1px, transparent 2em), repeating-linear-gradient(90deg, #666, #666 1px, transparent 1px, transparent 2em);
-    animation-name: spinner-glider-grid;
+    animation-name: spinner-glider-shift;
 }
-@keyframes spinner-glider-grid {
+@keyframes spinner-glider-shift {
     0% {
         left: -1em;
         top: 0em;
@@ -997,31 +997,21 @@
         top: -2em;
     }
 }
-@keyframes spinner-glider-prime-cell {
-    0% {
-        left: 3em;
-        top: 2em;
-    }
-    100% {
-        left: 1em;
-        top: 0em;
-    }
-}
 @keyframes spinner-glider-cells {
     0%, 24% {
-        box-shadow: 2em 0em, 0em 2em transparent, 2em 2em transparent, 4em 2em, 0em 4em, 2em 4em, 4em 4em, 6em 4em transparent, 2em 6em transparent, 4em 6em transparent, 6em 6em transparent;
+        box-shadow: 6em 2em, 4em 4em transparent, 6em 4em transparent, 8em 4em, 4em 6em, 6em 6em, 8em 6em, 10em 6em transparent, 6em 8em transparent, 8em 8em transparent, 10em 8em transparent;
     }
     25%, 49% {
-        box-shadow: 2em 0em transparent, 0em 2em, 2em 2em transparent, 4em 2em, 0em 4em transparent, 2em 4em, 4em 4em, 6em 4em transparent, 2em 6em, 4em 6em transparent, 6em 6em transparent;
+        box-shadow: 6em 2em transparent, 4em 4em, 6em 4em transparent, 8em 4em, 4em 6em transparent, 6em 6em, 8em 6em, 10em 6em transparent, 6em 8em, 8em 8em transparent, 10em 8em transparent;
     }
     50%, 74% {
-        box-shadow: 2em 0em transparent, 0em 2em transparent, 2em 2em transparent, 4em 2em, 0em 4em, 2em 4em transparent, 4em 4em, 6em 4em transparent, 2em 6em, 4em 6em, 6em 6em transparent;
+        box-shadow: 6em 2em transparent, 4em 4em transparent, 6em 4em transparent, 8em 4em, 4em 6em, 6em 6em transparent, 8em 6em, 10em 6em transparent, 6em 8em, 8em 8em, 10em 8em transparent;
     }
     75%, 99% {
-        box-shadow: 2em 0em transparent, 0em 2em transparent, 2em 2em, 4em 2em transparent, 0em 4em transparent, 2em 4em transparent, 4em 4em, 6em 4em, 2em 6em, 4em 6em, 6em 6em transparent;
+        box-shadow: 6em 2em transparent, 4em 4em transparent, 6em 4em, 8em 4em transparent, 4em 6em transparent, 6em 6em transparent, 8em 6em, 10em 6em, 6em 8em, 8em 8em, 10em 8em transparent;
     }
     100% {
-        box-shadow: 2em 0em transparent, 0em 2em transparent, 2em 2em transparent, 4em 2em, 0em 4em transparent, 2em 4em transparent, 4em 4em transparent, 6em 4em, 2em 6em, 4em 6em, 6em 6em;
+        box-shadow: 6em 2em transparent, 4em 4em transparent, 6em 4em transparent, 8em 4em, 4em 6em transparent, 6em 6em transparent, 8em 6em transparent, 10em 6em, 6em 8em, 8em 8em, 10em 8em;
     }
 }
 
