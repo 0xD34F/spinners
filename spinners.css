@@ -762,9 +762,8 @@
     height: 11em;
     border: .5em solid black;
     border-radius: 50%;
-    background-color: black;
+    background: linear-gradient(to bottom, black, black 50%, white 50%);
     position: relative;
-    box-shadow: inset 0 -10005em 0 -10000em white;
     box-sizing: border-box;
     animation: spinner-yin-yang 2s infinite linear;
 }
@@ -844,7 +843,7 @@
     height: 2em;
     position: relative;
     overflow: hidden;
-    font-family: Arial, sans-serif;
+    line-height: 1;
 }
 .spinner-counter::before,
 .spinner-counter::after {
